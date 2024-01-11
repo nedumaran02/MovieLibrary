@@ -1,0 +1,80 @@
+@charset "ISO-8859-1";
+/* Reset default browser styles */
+body,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Basic styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  background-color: rgb(243, 140, 5);
+  color: white;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px 0;
+  background-image: url(../image/loveourplanet.jpg);
+  background-position: 0cap;
+  color: #f4f4f4;
+  background-color: #f8f8f8;
+}
+
+.hero h2 {
+  margin-bottom: 10px;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 10px;
+}
+.nanna{
+  height: 100px;
+  width: 70px;
+  
+}
+
+.feature {
+  flex: 1;
+  padding: 10px;
+  background-color: #f4f4f4;
+  margin-right: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}

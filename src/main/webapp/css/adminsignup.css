@@ -1,0 +1,31 @@
+@charset "ISO-8859-1";
+.signupbody {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../image/sunset.jpg);
+    background-size: 225vh;
+    background-position: center;
+    height: 100vh;
+  }
+
+  .signup-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(237, 30, 30, 0.948);
+    padding: 40px;
+    width: 320px;
+  }
+  
+  #signupsubmit {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 43vh;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
