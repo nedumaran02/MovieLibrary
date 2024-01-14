@@ -10,9 +10,9 @@
 <title>Home | MovieLibrary</title>
 <link rel="stylesheet" href="css/home.css">
 </head>
-<body>
+<body class="whole">
   <h1>Movie Library</h1>
-  <% List<Movie> movies = (List)request.getAttribute("movies"); %>
+  <% List<Movie> movies =(List)request.getAttribute("movies");%>
   <table>
     <thead>
         <tr>
@@ -30,16 +30,16 @@
     <% for(Movie m : movies){ %>
     <tbody>
         <tr>
-			<td><%= m.getMovieid() %></td>
-			<td><%= m.getMoviename() %></td>
-			<td><%= m.getMovieprice() %></td>
-			<td><%= m.getMovierating()%></td>
-			<td><%= m.getMoviegenre() %></td>
-			<td><%= m.getMovielanguage() %></td>
+			<td><b><%= m.getMovieid() %></b></td>
+			<td><b><%= m.getMoviename() %></b></td>
+			<td><b><%= m.getMovieprice() %></b></td>
+			<td><b><%= m.getMovierating()%></b></td>
+			<td><b><%= m.getMoviegenre() %></b></td>
+			<td><b><%= m.getMovielanguage() %></b></td>
 			<% String base64image= new String(Base64.getEncoder().encode(m.getMovieimage())); %>
 			<td><img src="data:image/jpeg;base64, <%=base64image %>" height="100px" width="100px"></td>
-			<td> <a href="deletemovie?id=<%= m.getMovieid() %>">Delete Movie</a> </td>
-			<td><a href="editmovie?id=<%=m.getMovieid()%>">Edit Movie</a></td>
+			<td><a href="deletemovie?id=<%= m.getMovieid() %>"><b>Delete Movie</b></a> </td>
+			<td><a href="editmovie?id=<%=m.getMovieid()%>"><b>Edit Movie</b></a></td>
 		</tr>
     </tbody>
     <%} %>

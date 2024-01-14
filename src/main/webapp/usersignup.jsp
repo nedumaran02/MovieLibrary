@@ -27,7 +27,7 @@
                 </tr>
                 <tr>
                     <td>User Email</td>
-                    <td><input type="email" name="usermail" required></td>
+                    <td><input type="email" name="useremail" required></td>
                 </tr>
                 <tr>
                     <td>User Password</td>
