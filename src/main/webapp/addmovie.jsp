@@ -27,19 +27,19 @@
                 </tr>
                 <tr>
                     <td>Movie Rating</td>
-                    <td><input type="number" name="movierating" required></td>
+                    <td><input type="number" name="movierating" ></td>
                 </tr>
                 <tr>
                     <td>Movie Genre</td>
-                    <td><input type="text" name="moviegenre" required></td>
+                    <td><input type="text" name="moviegenre" ></td>
                 </tr>
 				<tr>
                     <td>Movie Language</td>
-                    <td><input type="text" name="movielanguage" required></td>
+                    <td><input type="text" name="movielanguage" ></td>
                 </tr>
 				<tr>
                     <td>Movie Image</td>
-                    <td><input type="file" name="movieimage" required></td>
+                    <td><input type="file" name="movieimage" ></td>
                 </tr>
             </table> <br>
         </div>

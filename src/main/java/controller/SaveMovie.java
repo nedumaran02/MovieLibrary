@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 
 import dao.AdminDao;
@@ -40,10 +41,22 @@ public class SaveMovie extends HttpServlet
 		
 		AdminDao a = new AdminDao();
 		try {
-			a.saveMovie(movie);
-			req.setAttribute("movies", a.getAllMovies());
-			RequestDispatcher rd = req.getRequestDispatcher("home.jsp");
-			rd.include(req, resp);
+			HttpSession session = req.getSession();
+			String adminname = (String)session.getAttribute("adminname");
+			if(adminname != null)
+			{
+				a.saveMovie(movie);
+				req.setAttribute("movies", a.getAllMovies());
+				RequestDispatcher rd = req.getRequestDispatcher("home.jsp");
+				rd.include(req, resp);
+			}
+			else
+			{
+				req.setAttribute("message", "Admin Login is Required!");
+				RequestDispatcher rd = req.getRequestDispatcher("adminlogin.jsp");
+				rd.include(req, resp);
+			}
+			
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -49,6 +49,5 @@ public class AdminSignUp extends HttpServlet
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		resp.getWriter().print(id);
 	}
 }

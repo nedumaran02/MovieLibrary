@@ -43,16 +43,14 @@
                 </tr>
 				<tr>
 					<td>Movie Image</td>
-					<td><input type="file" name="movieimage" ></td>
-					
-					
 					<% String base64image= new String(Base64.getEncoder().encode(m.getMovieimage())); %>
-					
+					<td>
+						<img src="data:image/jpeg;base64, <%=base64image %>" height="100px" width="100px"> <br>
+						<input type="file" name="movieimage" >
+						
+					</td>
                 </tr>
-                <tr>
-                	<td></td>
-                	<td></td>
-                </tr>
+
             </table> <br>
         </div>
           <button type="submit" id="signupsubmit">Submit</button>
